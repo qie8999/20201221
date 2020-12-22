@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            counter-increment: rint;
+            /*p태그가 늘어날 때마다 증가하는 변수*/
+        }
+        /*p태그 시작전에 카운터 변수 삽입*/
+        p::before
+        {
+            content:counter(rint) " . "
+            /*rint는 변수(다른걸 넣어도 된다)*/
+        }
+        /*p태그 끝에다가 페이지번호 삽입*/
+        p::after
+        {
+            content:" - "attr(data-page)"page" ;
+        }
+        p::first-letter
+        {
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p data-page="52">Lorem, ipsum dolor.</p>
+    <p data-page="273">Lorem, ipsum.</p>
+</body>
+</html>

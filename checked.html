@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* check박스를 체크하면, 그 바로 뒤에 있는 태그가 사라짐 */
+        input[type=checkbox]:checked+div
+        {
+            height:300px
+        }
+        div
+        {
+            overflow:hidden;
+            widows: 650px;
+            height:0px;
+            /* 1초안에 글씨 숨기기 */
+            -ms-transform-durantion:1s;
+            /* 익스플로러 */
+            -webkit-transition-duration:1s;
+            /* 크롬 */
+            -moz-transition-duration: 1s;
+            /* 파이어폭스 */
+            transition-duration: 1s;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox">
+    <div>
+        <h1>Lorem, ipsum dolor.</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora totam quas excepturi, necessitatibus illo amet nam ullam itaque pariatur sit tenetur non ratione veniam blanditiis explicabo! Dolorem voluptatibus facilis repellat architecto fugiat magnam ut, deserunt omnis id eos nulla rerum illum error ab cum vero quo aspernatur, quibusdam deleniti nostrum repudiandae neque! Explicabo optio iusto eligendi non nemo deleniti numquam corrupti veniam omnis dolor soluta ipsa praesentium pariatur, et odio totam! Sequi repudiandae explicabo delectus, dolorum, aliquid consectetur vitae sed nam alias quae eum? Sit animi perferendis quidem sequi, quo molestias asperiores reiciendis est distinctio, natus voluptas ipsam quibusdam similique!Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, labore.</p>
+    </div>
+</body>
+</html>
